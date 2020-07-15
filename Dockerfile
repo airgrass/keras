@@ -15,7 +15,7 @@ ENV TOKEN='keras'
 EXPOSE 8888
 WORKDIR $DIR
 
-CMD /bin/bash -c '--ip=0.0.0.0 --port=8888 --allow-root --no-browser \
+CMD /bin/bash -c 'jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser \
     --notebook-dir="$DIR" \
     --NotebookApp.password="$PASSWD" \
     --NotebookApp.token="$TOKEN" \

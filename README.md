@@ -1,2 +1,2 @@
 # keras
-for dockerhub ，build a environmental of keras+jupyter
+for dockerhub ，build a environmental of keras+jupyterlab

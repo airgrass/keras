@@ -12,6 +12,11 @@ ENV TOKEN='keras'
 #unset ENV PASSWD=
 #unset ENV TOKEN=
 
+# install nodejs
+RUN apt-get update -qq && apt-get install --no-install-recommends -y curl && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt-get install --no-install-recommends -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 EXPOSE 8888
 WORKDIR $DIR
 
